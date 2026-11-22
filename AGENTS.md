@@ -20,6 +20,11 @@ Deliver correct, fast, testable Python solutions and applications under limited 
 - Avoid heavyweight packages unless allowed by competition rules and measurably useful.
 - Favor explicit types at public interfaces, small functions, clear boundaries, and deterministic outputs.
 - Keep secrets outside code and logs; avoid touching private datasets unless necessary.
+- Default to Python and existing project dependencies.
+- Do not introduce Cython, C++, native extensions, or additional build systems without explicit user approval.
+- If profiling suggests native code could help, report the expected benefits and trade-offs before implementing.
+- Use the `native-performance` skill only when the user explicitly requests native development or approves it.
+- Do not treat a generic request to "make it faster" as authorization to introduce native code.
 
 ## Algorithm / ML quality
 - Solve the general input/output contract. Do not hardcode examples or add test-specific branches to pass visible cases.
@@ -38,6 +43,16 @@ Deliver correct, fast, testable Python solutions and applications under limited 
 - Format: RESULT | CHANGE | EVIDENCE | RISK | NEXT (omit empty fields).
 - Report only actionable evidence. No full logs or broad architectural essays unless requested.
 - Stop when requested acceptance criteria are met; don't add speculative features.
+
+## Performance escalation
+- Profile before optimizing; prioritize algorithms and data layout.
+- Prefer Python and existing dependencies.
+- Consider native acceleration only for demonstrated bottlenecks, explicit performance requirements, or existing native code.
+- Do not introduce Cython, C++, native extensions, or new build systems without explicit user approval.
+- Activate `native-performance` only when the user explicitly requests native development or approves it.
+- A generic request to "make it faster" does not authorize native code.
+- Prefer the least complex solution that meets the performance target.
+- Preserve correctness and benchmark end-to-end performance.
 
 ## Communication
 - Lead with the result or direct answer.
