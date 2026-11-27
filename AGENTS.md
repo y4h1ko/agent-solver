@@ -35,6 +35,9 @@ Deliver correct, fast, testable Python solutions and applications under limited 
 - Compare against a named baseline under identical input, seed, hardware, and environment when possible.
 - For speed claims, collect measurements; distinguish algorithmic gains from noise.
 
+- For substantive data analysis, use `data-analysis`. Reuse valid project research and persist new findings, hypotheses, and experimental evidence in `analysis/`.
+- Do not run full exploratory analysis for ordinary coding tasks.
+
 ## Execution and reporting
 - Targeted checks first; broader tests when changes warrant them.
 - Keep verification proportional to the change. Reuse relevant results for unchanged code; rerun checks after changes that could invalidate them.
@@ -43,6 +46,7 @@ Deliver correct, fast, testable Python solutions and applications under limited 
 - Format: RESULT | CHANGE | EVIDENCE | RISK | NEXT (omit empty fields).
 - Report only actionable evidence. No full logs or broad architectural essays unless requested.
 - Stop when requested acceptance criteria are met; don't add speculative features.
+- For requested data analysis, the 120-word response limit applies to the executive summary, not evidence tables, visualizations, or necessary technical findings.
 
 ## Performance escalation
 - Profile before optimizing; prioritize algorithms and data layout.
